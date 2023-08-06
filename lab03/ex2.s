@@ -42,11 +42,11 @@ main:
     la s1, source
     la s2, dest
 loop:
-    slli s3, t0, 2
-    add t1, s1, s3
+    slli s3, t0, 2 # 4k, 因为 int 的大小是 4 bytes
+    add t1, s1, s3 # 定位到 source 第 k 个元素的地址
     lw t2, 0(t1)
     beq t2, x0, exit
-    add a0, x0, t2
+    add a0, x0, t2 # 从这里开始准备参数
     addi sp, sp, -8
     sw t0, 0(sp)
     sw t2, 4(sp)
@@ -54,10 +54,10 @@ loop:
     lw t0, 0(sp)
     lw t2, 4(sp)
     addi sp, sp, 8
-    add t2, x0, a0
+    add t2, x0, a0 #t2 = ret
     add t3, s2, s3
-    sw t2, 0(t3)
-    add s0, s0, t2
+    sw t2, 0(t3) # dest[k] = t2
+    add s0, s0, t2 # sum += dest[k]
     addi t0, t0, 1
     jal x0, loop
 exit:
@@ -71,3 +71,7 @@ exit:
     addi sp, sp, 20
     # END EPILOGUE
     jr ra
+
+# t0 is the register that represents k
+# s0 is the register that represents sum
+# s1 and s2 are the registers that act as pointers to source and dest arrays
