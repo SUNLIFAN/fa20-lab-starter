@@ -232,11 +232,7 @@
       <a name="facing" val="east"/>
       <a name="label" val="Currrent_State_0"/>
     </comp>
-    <comp lib="0" loc="(720,590)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Current_State_1"/>
-    </comp>
-    <comp lib="0" loc="(730,600)" name="Tunnel">
+    <comp lib="0" loc="(720,640)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Current_State_1"/>
     </comp>
@@ -288,7 +284,7 @@
     <wire from="(720,450)" to="(750,450)"/>
     <wire from="(720,530)" to="(740,530)"/>
     <wire from="(720,560)" to="(760,560)"/>
-    <wire from="(720,590)" to="(740,590)"/>
+    <wire from="(720,640)" to="(740,640)"/>
     <wire from="(730,140)" to="(730,200)"/>
     <wire from="(730,140)" to="(780,140)"/>
     <wire from="(730,420)" to="(730,430)"/>
@@ -297,7 +293,7 @@
     <wire from="(740,420)" to="(760,420)"/>
     <wire from="(740,530)" to="(740,550)"/>
     <wire from="(740,550)" to="(760,550)"/>
-    <wire from="(740,570)" to="(740,590)"/>
+    <wire from="(740,570)" to="(740,640)"/>
     <wire from="(740,570)" to="(760,570)"/>
     <wire from="(750,440)" to="(750,450)"/>
     <wire from="(750,440)" to="(760,440)"/>
